@@ -49,7 +49,7 @@ class CoursesController extends Controller
     public function store(Request $request)
     {
       $response['success'] = false;
-      $response['message'] = "The course could´nt be created, please try again";
+      $response['message'] = "The course couldn´t be created, please try again";
       $response['data'] = null;
       $code = 400;
 
@@ -94,7 +94,7 @@ class CoursesController extends Controller
 
         if($course->save()){
           $response['success'] = true;
-          $response['message'] = "The course was successfully found, see the data below";
+          $response['message'] = "The course was successfully updated";
           $response['data'] = $course;
           $code = 200;
         } else {

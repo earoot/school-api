@@ -10,4 +10,9 @@ class Course extends Model
       'name',
       'code'
     ];
+
+    public static function getByCode($code)
+    {
+      return self::where('code', $code)->first();
+    }
 }
