@@ -28,7 +28,7 @@ class StudentsController extends Controller
 
   public function store(Request $request)
   {
-    $response['succes'] = true;
+    $response['success'] = true;
     $response['message'] = "Store Student OK";
     $response['data'] = $request->all();
 
@@ -37,7 +37,7 @@ class StudentsController extends Controller
 
   public function update($id, Request $request)
   {
-    $response['succes'] = true;
+    $response['success'] = true;
     $response['message'] = "Update Student OK";
     $response['data'] = "ID: ".$id;
 
@@ -46,7 +46,7 @@ class StudentsController extends Controller
 
   public function destroy($id)
   {
-    $response['succes'] = true;
+    $response['success'] = true;
     $response['message'] = "Delete Student OK";
     $response['data'] = "ID: ".$id;
 
