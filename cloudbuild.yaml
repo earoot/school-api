@@ -1,0 +1,10 @@
+steps:
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['build', '-t', 'gcr.io/ageless-lamp-277322/github.com/earoot/school-api:latest', '.']
+    - name: 'gcr.io/cloud-builders/docker'
+      args: ['push', 'gcr.io/ageless-lamp-277322/github.com/earoot/school-api:latest']
+    - name: gcr.io/cloud-builders/gcloud
+      args: [ compute, instances, update-container, instance-school-2, --container-image=gcr.io/ageless-lamp-277322/github.com/earoot/school-api:latest, --zone=us-central1-a ]
+
+images:
+- gcr.io/ageless-lamp-277322/github.com/earoot/school-api:latest
